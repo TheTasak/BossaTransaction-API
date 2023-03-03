@@ -26,6 +26,7 @@
       <excludeFolder url="file://$MODULE_DIR$/public/system" />
       <excludeFolder url="file://$MODULE_DIR$/components" />
     </content>
+    <content url="file://$MODULE_DIR$/../BossaTransactionFrontend" />
     <orderEntry type="jdk" jdkName="ruby-2.6.10-p210" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="actioncable (v6.1.7.2, ruby-2.6.10-p210) [gem]" level="application" />
