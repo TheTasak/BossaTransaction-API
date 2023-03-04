@@ -1,0 +1,1 @@
+json.extract! transaction, :id, :title, :details, :price, :date, :created_at, :updated_at
