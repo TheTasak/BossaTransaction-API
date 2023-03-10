@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[ show edit update destroy ]
+  before_action :set_default_request_format
 
   # GET /transactions or /transactions.json
   def index
@@ -58,8 +59,12 @@ class TransactionsController < ApplicationController
       @transaction = Transaction.find(params[:id])
     end
 
+    def set_default_request_format
+      request.format = :json
+    end
+
     # Only allow a list of trusted parameters through.
     def transaction_params
-      params.require(:transaction).permit(:id, :name, :details, :price, :date, :_destroy)
+      params.require(:transaction).permit(:id, :name, :t_type, :details, :price, :date, :_destroy)
     end
 end

@@ -16,10 +16,11 @@ ActiveRecord::Schema.define(version: 2023_03_04_151629) do
   enable_extension "plpgsql"
 
   create_table "transactions", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
+    t.string "t_type", null: false
     t.string "details"
-    t.decimal "price"
-    t.date "date"
+    t.decimal "price", null: false
+    t.date "date", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
