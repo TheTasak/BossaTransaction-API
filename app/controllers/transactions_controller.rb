@@ -1,6 +1,7 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[ show edit update destroy ]
   before_action :set_default_request_format
+  skip_before_action :verify_authenticity_token
 
   # GET /transactions or /transactions.json
   def index
