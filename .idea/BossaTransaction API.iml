@@ -41,6 +41,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v6.1.7.2, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.1.7.2, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.1, ruby-2.6.10-p210) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.18, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.16.0, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, ruby-2.6.10-p210) [gem]" level="application" />
@@ -75,6 +76,7 @@
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.6.5, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.2, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.6.3, ruby-2.6.10-p210) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-cors (v2.0.0, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mini-profiler (v2.3.4, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v2.0.2, ruby-2.6.10-p210) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v6.1.7.2, ruby-2.6.10-p210) [gem]" level="application" />
