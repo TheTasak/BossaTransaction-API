@@ -1,7 +1,6 @@
 class LayoutsController < ApplicationController
   before_action :set_layout, only: %i[ show edit update destroy ]
   before_action :set_default_request_format
-  skip_before_action :verify_authenticity_token
 
   # GET /layouts or /layouts.json
   def index

@@ -16,9 +16,9 @@
 # )
 
 user = User.create(
-  {id: 1, username: "user", password: "password"}
+  {id: 2, username: "admin", password: "admin"}
 )
 
 layout = Layout.create(
-  {id: 1, content: "", user_id: 1}
+  {id: 2, content: "", user_id: 2}
 )

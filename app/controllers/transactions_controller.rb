@@ -1,20 +1,14 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: %i[ show edit update destroy ]
   before_action :set_default_request_format
-  skip_before_action :verify_authenticity_token
 
   # GET /transactions or /transactions.json
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.where(user_id: current_user)
   end
 
   # GET /transactions/1 or /transactions/1.json
   def show
-  end
-
-  # GET /transactions/new
-  def new
-    @transaction = Transaction.new
   end
 
   # GET /transactions/1/edit
@@ -24,14 +18,8 @@ class TransactionsController < ApplicationController
   # POST /transactions or /transactions.json
   def create
     @transaction = Transaction.new(transaction_params)
-
-    respond_to do |format|
-      if @transaction.save
-        format.json { render :show, status: :created }
-      else
-        format.json { render json: @transaction.errors, status: :unprocessable_entity }
-      end
-    end
+    @transaction.user = current_user
+    @transaction.save
   end
 
   # PATCH/PUT /transactions/1 or /transactions/1.json
@@ -66,6 +54,6 @@ class TransactionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def transaction_params
-      params.require(:transaction).permit(:id, :name, :t_type, :amount, :price, :date, :_destroy)
+      params.require(:transaction).permit(:id, :name, :t_type, :amount, :price, :date, :user_id, :_destroy)
     end
 end
