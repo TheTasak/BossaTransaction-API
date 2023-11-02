@@ -16,7 +16,7 @@ class ApplicationController < ActionController::API
 
   def authorize
     @current_user = User.find_by(id: session[:user_id])
-    return unless @current_user
+    return if @current_user
     render json: { errors: ["Not authorized"] }, status: :unauthorized
   end
   def render_unprocessable_entity_response(exception)
@@ -25,8 +25,6 @@ class ApplicationController < ActionController::API
 
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
-    puts "user id"
-    puts session[:user_id]
   end
 
 end
